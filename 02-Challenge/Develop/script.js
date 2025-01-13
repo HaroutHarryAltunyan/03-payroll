@@ -25,15 +25,60 @@ while (continueAdding) {
     firstName = "Unknown";
 }
 
+let lastName = prompt ("Enter the employee's last name:");
 
+if (lastName === null) {
 
+  break;
+}
+
+lastName = lastName.trim();
+
+if (!lastName) {
+
+  lastName = "Unkown";
 
 }
 
-  
+let salary = prompt ("Enter the employee's salary");
 
+if (salary === null) {
+
+  break;
 
 }
+
+salary = Number (salary);
+
+if (isNaN(salary)) {
+
+  salary = 0;
+
+}
+
+employees.push({
+
+  firstName: firstName,
+
+  lastName: lastName,
+
+  salary: salary
+
+});
+
+const addMore = prompt(" Do you want to add another employee? (yes or no)");
+
+if (addMore === null || addMore.toLowerCase().startsWith('n')) {
+
+  continueAdding = false;
+
+}
+
+}
+
+return employees;
+
+};
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
