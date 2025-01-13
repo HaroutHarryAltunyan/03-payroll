@@ -84,15 +84,35 @@ return employees;
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
 
+  if (employeesArray.length === 0) {
 
+    console.log("No employees to calculate an average salary for.");
 
+    return;
 
+  }
+
+  let totalSalary = 0;
+
+  for (let i = 0; i < employeesArray.length; i++) {
+
+    totalSalary += employeesArray[i].salary;
+
+  }
 
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
+
+
+
+
+
+
+
 }
 
 /*
